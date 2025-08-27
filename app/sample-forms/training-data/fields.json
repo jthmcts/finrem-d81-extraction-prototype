@@ -1,0 +1,92 @@
+{
+	"$schema": "https://schema.cognitiveservices.azure.com/formrecognizer/2021-03-01/fields.json",
+	"fields": [
+		{
+			"fieldKey": "Court",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "CaseReference",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Applicant",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "Respondent",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "SeparateForm",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "JointForm",
+			"fieldType": "selectionMark",
+			"fieldFormat": "not-specified"
+		},
+		{
+			"fieldKey": "MoneyAndProperty",
+			"fieldFormat": "not-specified",
+			"fieldType": "object",
+			"fields": [
+				{
+					"fieldKey": "Property1Value",
+					"fieldType": "MoneyAndProperty_object",
+					"fieldFormat": "not-specified"
+				},
+				{
+					"fieldKey": "Property2Value",
+					"fieldType": "MoneyAndProperty_object",
+					"fieldFormat": "not-specified"
+				},
+				{
+					"fieldKey": "Other",
+					"fieldType": "MoneyAndProperty_object",
+					"fieldFormat": "not-specified"
+				},
+				{
+					"fieldKey": "GrossCapitalTotal",
+					"fieldType": "MoneyAndProperty_object",
+					"fieldFormat": "not-specified"
+				}
+			],
+			"visualizationHint": "vertical"
+		},
+		{
+			"fieldKey": "SeparateFormReasons",
+			"fieldType": "string",
+			"fieldFormat": "not-specified"
+		}
+	],
+	"definitions": {
+		"MoneyAndProperty_object": {
+			"fieldKey": "MoneyAndProperty_object",
+			"fieldType": "object",
+			"fieldFormat": "not-specified",
+			"fields": [
+				{
+					"fieldKey": "Applicant",
+					"fieldType": "string",
+					"fieldFormat": "not-specified"
+				},
+				{
+					"fieldKey": "Respondent",
+					"fieldType": "string",
+					"fieldFormat": "not-specified"
+				},
+				{
+					"fieldKey": "Children",
+					"fieldType": "string",
+					"fieldFormat": "not-specified"
+				}
+			]
+		}
+	}
+}
