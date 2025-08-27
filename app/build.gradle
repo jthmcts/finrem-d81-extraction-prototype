@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'io.freefair.lombok' version "8.14.2"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.azure', name: 'azure-ai-documentintelligence', version: '1.0.4'
+    implementation 'org.slf4j:slf4j-api:2.0.12'
+    implementation 'org.slf4j:slf4j-simple:2.0.12'
+
+    testImplementation libs.junit.jupiter
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    mainClass = 'uk.gov.hmcts.finrem.d81.TestModel'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
