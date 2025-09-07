@@ -20,10 +20,10 @@ The model can then be used to extract data from new D81 forms. An example form i
 5. When the deployment is complete, select Go to resource to view the resource's Overview page.
 
 ## Upload training data to Azure Blob Storage
-1. In the `app/bin/upload-training-data.sh` script, modify the subscription_id, resource_group and location variables with the appropriate values for your Azure Document Intelligence resource.
+1. In the `training/upload-training-data.sh` script, modify the subscription_id, resource_group and location variables with the appropriate values for your Azure Document Intelligence resource.
 2. Enter the following command to run the script:
    ```bash
-   cd ./training-data
+   cd ./training
    ./upload-training-data.sh
    ```
 
