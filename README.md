@@ -23,7 +23,8 @@ The model can then be used to extract data from new D81 forms. An example form i
 1. In the `app/bin/upload-training-data.sh` script, modify the subscription_id, resource_group and location variables with the appropriate values for your Azure Document Intelligence resource.
 2. Enter the following command to run the script:
    ```bash
-   ./app/bin/upload-training-data.sh
+   cd ./training-data
+   ./upload-training-data.sh
    ```
 
 ## Train the model using Document Intelligence Studio
