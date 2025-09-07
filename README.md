@@ -20,17 +20,18 @@ The model can then be used to extract data from new D81 forms. An example form i
 5. When the deployment is complete, select Go to resource to view the resource's Overview page.
 
 ## Upload training data to Azure Blob Storage
-1. In the `app/bin/upload-training-data.sh` script, modify the subscription_id, resource_group and location variables with the appropriate values for your Azure Document Intelligence resource.
+1. In the `training/upload-training-data.sh` script, modify the subscription_id, resource_group and location variables with the appropriate values for your Azure Document Intelligence resource.
 2. Enter the following command to run the script:
    ```bash
-   ./app/bin/upload-training-data.sh
+   cd ./training
+   ./upload-training-data.sh
    ```
 
 ## Train the model using Document Intelligence Studio
-1. In a browser tab, open the Azure Document Intelligence Studio at https://documentintelligence.azure.com/.
-2. In the Custom Models section, select the Custom extraction Model tile.
+1. In a browser tab, open the Azure Document Intelligence Studio at https://documentintelligence.ai.azure.com.
+2. In the Custom Models section, select the **Custom extraction model** tile.
 3. Create a new project, selecting the storage account that was created by the `upload-training-data.sh` script.
-4. Select Train to train a new model, selecting Build Mode: Template.
+4. In the Label data page, select **Train** to train a new model, selecting Build Mode: Template.
 
 ## Test the custom model
 This can be done either using the Azure Document Intelligence Studio or the Java application provided in this repository.
